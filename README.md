@@ -144,40 +144,40 @@ L’objectif était de mettre en place un **contrôleur de domaine**, d’organi
 ## Captures d’écran
 
 ### Création et installation
-![Création VM](screenshots/01-creation-vm.png)
-![Installation Windows Server](screenshots/02-installation-windows-server.png)
-![Installation rôle AD DS](screenshots/03-installation-role-ad-ds.png)
-![Promotion contrôleur de domaine](screenshots/04-promotion-controleur-domaine.png)
+![Création VM](01-creation-vm.png)
+![Installation Windows Server](02-installation-windows-server.png)
+![Installation rôle AD DS](03-installation-role-ad-ds.png)
+![Promotion contrôleur de domaine](04-promotion-controleur-domaine.png)
 
 ### Réseau et connectivité
-![Configuration réseau serveur](screenshots/05-configuration-reseau-serveur.png)
-![Vérification ping serveur](screenshots/06-verification-ping-serveur.png)
+![Configuration réseau serveur](05-configuration-reseau-serveur.png)
+![Vérification ping serveur](06-verification-ping-serveur.png)
 
 ### Active Directory
-![OU Active Directory](screenshots/07-ou-active-directory.png)
-![Utilisateurs et groupes](screenshots/08-utilisateurs-et-groupes.png)
-![Création utilisateurs](screenshots/09-creation-utilisateurs.png)
-![Création ordinateurs](screenshots/10-creation-ordinateurs.png)
+![OU Active Directory](07-ou-active-directory.png)
+![Utilisateurs et groupes](08-utilisateurs-et-groupes.png)
+![Création utilisateurs](09-creation-utilisateurs.png)
+![Création ordinateurs](10-creation-ordinateurs.png)
 
 ### Jonction au domaine
-![Joindre le domaine](screenshots/11-joindre-domaine.png)
-![Jonction au domaine réussie](screenshots/12-jonction-domaine-reussie.png)
+![Joindre le domaine](11-joindre-domaine.png)
+![Jonction au domaine réussie](12-jonction-domaine-reussie.png)
 
 ### Partages réseau
-![Accès aux partages](screenshots/13-acces-partages-reseau.png)
-![Partage dossier commun](screenshots/14-partage-dossier-commun.png)
-![Partage dossier comptabilité](screenshots/15-partage-dossier-comptabilite.png)
-![Accès refusé hors compta](screenshots/16-acces-refuse-hors-compta.png)
-![Accès commun réussi](screenshots/17-acces-commun-reussi.png)
+![Accès aux partages](13-acces-partages-reseau.png)
+![Partage dossier commun](14-partage-dossier-commun.png)
+![Partage dossier comptabilité](15-partage-dossier-comptabilite.png)
+![Accès refusé hors compta](16-acces-refuse-hors-compta.png)
+![Accès commun réussi](17-acces-commun-reussi.png)
 
 ### GPO
-![Création GPO fond d’écran](screenshots/18-creation-gpo-fond-ecran.png)
-![Sécurité partage fond d’écran](screenshots/19-partage-fond-ecran.png)
-![Fond d’écran appliqué](screenshots/20-gpo-fond-ecran-appliquee.png)
-![Création GPO blocage configuration](screenshots/21-creation-gpo-blocage-config.png)
-![Configuration GPO blocage](screenshots/22-configuration-gpo-blocage.png)
-![Résultat blocage panneau de configuration](screenshots/23-resultat-blocage-panneau-config.png)
-![Accès IT conservé](screenshots/24-autorisation-it-panneau-config.png)
+![Création GPO fond d’écran](18-creation-gpo-fond-ecran.png)
+![Sécurité partage fond d’écran](19-partage-fond-ecran.png)
+![Fond d’écran appliqué](20-gpo-fond-ecran-appliquee.png)
+![Création GPO blocage configuration](21-creation-gpo-blocage-config.png)
+![Configuration GPO blocage](22-configuration-gpo-blocage.png)
+![Résultat blocage panneau de configuration](23-resultat-blocage-panneau-config.png)
+![Accès IT conservé](24-autorisation-it-panneau-config.png)
 
 ---
 
