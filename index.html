@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projet Active Directory – keran.local</title>
+  <meta name="description" content="Projet d'administration système : déploiement d'une infrastructure Active Directory complète sous Windows Server avec partages réseau, OU, GPO et intégration de postes clients.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="brand">AD • keran.local</div>
+      <div class="nav-links">
+        <a href="#overview">Vue d’ensemble</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#gallery">Captures</a>
+        <a href="README.md">README</a>
+      </div>
+    </nav>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Projet d’administration système</p>
+        <h1>Infrastructure Active Directory d’entreprise</h1>
+        <p class="lead">Conception et déploiement d’un environnement <strong>Windows Server</strong> avec <strong>Active Directory</strong>, <strong>DNS</strong>, partages réseau sécurisés, <strong>jonction au domaine</strong> et <strong>GPO</strong> appliquées à des postes clients Windows 11.</p>
+        <div class="tags">
+          <span>Windows Server 2025</span>
+          <span>Active Directory</span>
+          <span>DNS</span>
+          <span>GPO</span>
+          <span>VirtualBox</span>
+          <span>SMB / NTFS</span>
+        </div>
+        <div class="cta-row">
+          <a class="button primary" href="#gallery">Voir les captures</a>
+          <a class="button secondary" href="README.md">Ouvrir le README GitHub</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h2>Résumé</h2>
+        <ul>
+          <li><strong>Domaine :</strong> keran.local</li>
+          <li><strong>Serveur :</strong> Contrôleur de domaine sous Windows Server</li>
+          <li><strong>Clients :</strong> Postes Windows 11 intégrés au domaine</li>
+          <li><strong>Organisation :</strong> OU, groupes, utilisateurs, ordinateurs</li>
+          <li><strong>Sécurité :</strong> permissions de partage + NTFS + GPO ciblées</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="overview" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Vue d’ensemble</p>
+        <h2>Objectif du projet</h2>
+      </div>
+      <div class="grid three">
+        <article class="card">
+          <h3>Centraliser l’administration</h3>
+          <p>Déployer un contrôleur de domaine capable de gérer les utilisateurs, les groupes, les ordinateurs et les ressources d’une entreprise depuis une console unique.</p>
+        </article>
+        <article class="card">
+          <h3>Sécuriser les ressources</h3>
+          <p>Mettre en place des partages réseau maîtrisés avec permissions de partage et NTFS, afin de contrôler précisément l’accès aux dossiers métiers.</p>
+        </article>
+        <article class="card">
+          <h3>Automatiser avec les GPO</h3>
+          <p>Appliquer des stratégies ciblées pour personnaliser l’environnement utilisateur et restreindre certains accès selon le service.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="architecture" class="section alt">
+      <div class="section-heading">
+        <p class="eyebrow">Architecture</p>
+        <h2>Environnement technique</h2>
+      </div>
+      <div class="grid two">
+        <article class="card">
+          <h3>Composants déployés</h3>
+          <ul class="clean-list">
+            <li>Oracle VirtualBox pour l’environnement de virtualisation</li>
+            <li>Windows Server 2025 pour le serveur principal</li>
+            <li>Active Directory Domain Services (AD DS)</li>
+            <li>Service DNS associé au domaine</li>
+            <li>Postes Windows 11 joints au domaine</li>
+            <li>Partages SMB avec sécurité NTFS</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Organisation logique</h3>
+          <ul class="clean-list">
+            <li><strong>Domaine :</strong> keran.local</li>
+            <li><strong>OU :</strong> Comptabilité, IT, Direction, Marketing, Ressources humaines, Ordinateurs</li>
+            <li><strong>Groupes :</strong> groupes métiers dédiés</li>
+            <li><strong>Ordinateurs :</strong> ex. PC-COMPTA1, PC-COMPTA2</li>
+            <li><strong>Dossiers :</strong> commun, comptabilité, fond d’écran GPO</li>
+          </ul>
+        </article>
+      </div>
+      <div class="timeline">
+        <div class="step"><span>1</span><div><h4>Installation</h4><p>Création des VM, installation de Windows Server et préparation du client Windows 11.</p></div></div>
+        <div class="step"><span>2</span><div><h4>Déploiement AD DS</h4><p>Ajout du rôle AD DS, promotion du serveur en contrôleur de domaine et création de keran.local.</p></div></div>
+        <div class="step"><span>3</span><div><h4>Structuration</h4><p>Création des OU, utilisateurs, groupes et ordinateurs selon l’organisation de l’entreprise.</p></div></div>
+        <div class="step"><span>4</span><div><h4>Partages réseau</h4><p>Mise en place des dossiers commun et comptabilité avec permissions adaptées.</p></div></div>
+        <div class="step"><span>5</span><div><h4>GPO et validation</h4><p>Déploiement du fond d’écran, blocage ciblé du panneau de configuration et tests finaux.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Compétences</p>
+        <h2>Ce que ce projet démontre</h2>
+      </div>
+      <div class="grid three">
+        <article class="card"><h3>Administration Windows Server</h3><p>Installation, configuration, rôles serveurs et gestion d’un contrôleur de domaine.</p></article>
+        <article class="card"><h3>Active Directory</h3><p>Création des OU, comptes utilisateurs, groupes, postes et logique d’administration centralisée.</p></article>
+        <article class="card"><h3>Réseau et sécurité</h3><p>Configuration IP / DNS, connectivité, droits d’accès, partages SMB et stratégies de groupe.</p></article>
+      </div>
+    </section>
+
+    <section id="gallery" class="section alt">
+      <div class="section-heading">
+        <p class="eyebrow">Captures d’écran</p>
+        <h2>Étapes clés du déploiement</h2>
+      </div>
+      <div class="gallery">
+        <figure class="shot-card"><a href="screenshots/01-creation-vm.png" target="_blank" rel="noopener"><img src="screenshots/01-creation-vm.png" alt="Création de la machine virtuelle du projet sous Oracle VirtualBox."></a><figcaption>Création de la machine virtuelle du projet sous Oracle VirtualBox.</figcaption></figure>
+        <figure class="shot-card"><a href="screenshots/02-installation-windows-server.png" target="_blank" rel="noopener"><img src="screenshots/02-installation-windows-server.png" alt="Installation de Windows Server sur la machine dédiée au contrôleur de domaine."></a><figcaption>Installation de Windows Server sur la machine dédiée au contrôleur de domaine.</figcaption></figure>
+        <figure class="shot-card"><a href="screenshots/03-installation-role-ad-ds.png" target="_blank" rel="noopener"><img src="screenshots/03-installation-role-ad-ds.png" alt="Ajout du rôle Active Directory Domain Services (AD DS) depuis le Gestionnaire de serveur."></a><figcaption>Ajout du rôle Active Directory Domain Services (AD DS) depuis le Gestionnaire de serveur.</figcaption></figure>
+        <figure class="shot-card"><a href="screenshots/04-promotion-controleur-domaine.png" target="_blank" rel="noopener"><img src="screenshots/04-promotion-controleur-domaine.png" alt="Promotion du serveur en contrôleur de domaine et préparation du déploiement AD DS."></a><figcaption>Promotion du serveur en contrôleur de domaine et préparation du déploiement AD DS.</figcaption></figure>
+        <figure class="shot-card"><a href="screenshots/05-configuration-reseau-serveur.png" target="_blank" rel="noopener"><img src="screenshots/05-configuration-reseau-serveur.png" alt="Configuration réseau du serveur avec adresse IP statique et paramètres réseau adaptés."></a><figcaption>Configuration réseau du serveur avec adresse IP statique et paramètres réseau adaptés.</figcaption></figure>
+        <figure class="shot-card"><a href="screenshots/06-verification-ping-serveur.png" target="_blank" rel="noopener"><img src="screenshots/06-verification-ping-serveur.png" alt="Vérification de la connectivité vers le serveur avec la commande ping."></a><figcaption>Vérification de la connectivité vers le serveur avec la commande ping.</figcaption></figure>
+        <figure class="shot-card"><a href="screenshots/07-ou-active-directory.png" target="_blank" rel="noopener"><img src="screenshots/07-ou-active-directory.png" alt="Création et organisation des unités d’organisation (OU) dans Active Directory."></a><figcaption>Création et organisation des unités d’organisation (OU) dans Active Directory.</figcaption></figure>
+        <figure class="shot-card"><a href="screenshots/08-utilisateurs-et-groupes.png" target="_blank" rel="noopener"><img src="screenshots/08-utilisateurs-et-groupes.png" alt="Création des groupes métiers et structuration logique des ressources."></a><figcaption>Création des groupes métiers et structuration logique des ressources.</figcaption></figure>
+        <figure class="shot-card"><a href="screenshots/09-creation-utilisateurs.png" target="_blank" rel="noopener"><img src="screenshots/09-creation-utilisateurs.png" alt="Création des comptes utilisateurs dans les OU correspondantes."></a><figcaption>Création des comptes utilisateurs dans les OU correspondantes.</figcaption></figure>
+        <figure class="shot-card"><a href="screenshots/10-creation-ordinateurs.png" target="_blank" rel="noopener"><img src="screenshots/10-creation-ordinateurs.png" alt="Organisation des ordinateurs du domaine dans les OU dédiées."></a><figcaption>Organisation des ordinateurs du domaine dans les OU dédiées.</figcaption></figure>
+        <figure class="shot-card"><a href="screenshots/11-joindre-domaine.png" target="_blank" rel="noopener"><img src="screenshots/11-joindre-domaine.png" alt="Configuration du poste client pour rejoindre le domaine keran.local."></a><figcaption>Configuration du poste client pour rejoindre le domaine keran.local.</figcaption></figure>
+        <figure class="shot-card"><a href="screenshots/12-jonction-domaine-reussie.png" target="_blank" rel="noopener"><img src="screenshots/12-jonction-domaine-reussie.png" alt="Message de confirmation après jonction réussie du poste client au domaine."></a><figcaption>Message de confirmation après jonction réussie du poste client au domaine.</figcaption></figure>
+        <figure class="shot-card"><a href="screenshots/13-acces-partages-reseau.png" target="_blank" rel="noopener"><img src="screenshots/13-acces-partages-reseau.png" alt="Accès aux partages réseau du serveur depuis un poste membre du domaine."></a><figcaption>Accès aux partages réseau du serveur depuis un poste membre du domaine.</figcaption></figure>
+        <figure class="shot-card"><a href="screenshots/14-partage-dossier-commun.png" target="_blank" rel="noopener"><img src="screenshots/14-partage-dossier-commun.png" alt="Configuration du partage du dossier commun pour l’ensemble des utilisateurs autorisés."></a><figcaption>Configuration du partage du dossier commun pour l’ensemble des utilisateurs autorisés.</figcaption></figure>
+        <figure class="shot-card"><a href="screenshots/15-partage-dossier-comptabilite.png" target="_blank" rel="noopener"><img src="screenshots/15-partage-dossier-comptabilite.png" alt="Permissions appliquées au dossier comptabilité pour limiter l’accès au groupe concerné."></a><figcaption>Permissions appliquées au dossier comptabilité pour limiter l’accès au groupe concerné.</figcaption></figure>
+        <figure class="shot-card"><a href="screenshots/16-acces-refuse-hors-compta.png" target="_blank" rel="noopener"><img src="screenshots/16-acces-refuse-hors-compta.png" alt="Test d’accès refusé au dossier comptabilité pour un utilisateur non autorisé."></a><figcaption>Test d’accès refusé au dossier comptabilité pour un utilisateur non autorisé.</figcaption></figure>
+        <figure class="shot-card"><a href="screenshots/17-acces-commun-reussi.png" target="_blank" rel="noopener"><img src="screenshots/17-acces-commun-reussi.png" alt="Accès réussi au dossier commun depuis un poste client du domaine."></a><figcaption>Accès réussi au dossier commun depuis un poste client du domaine.</figcaption></figure>
+        <figure class="shot-card"><a href="screenshots/18-creation-gpo-fond-ecran.png" target="_blank" rel="noopener"><img src="screenshots/18-creation-gpo-fond-ecran.png" alt="Création de la GPO de personnalisation pour déployer un fond d’écran d’entreprise."></a><figcaption>Création de la GPO de personnalisation pour déployer un fond d’écran d’entreprise.</figcaption></figure>
+        <figure class="shot-card"><a href="screenshots/19-partage-fond-ecran.png" target="_blank" rel="noopener"><img src="screenshots/19-partage-fond-ecran.png" alt="Configuration des droits NTFS du dossier contenant l’image utilisée par la GPO."></a><figcaption>Configuration des droits NTFS du dossier contenant l’image utilisée par la GPO.</figcaption></figure>
+        <figure class="shot-card"><a href="screenshots/20-gpo-fond-ecran-appliquee.png" target="_blank" rel="noopener"><img src="screenshots/20-gpo-fond-ecran-appliquee.png" alt="Résultat final : fond d’écran automatiquement déployé sur un poste utilisateur."></a><figcaption>Résultat final : fond d’écran automatiquement déployé sur un poste utilisateur.</figcaption></figure>
+        <figure class="shot-card"><a href="screenshots/21-creation-gpo-blocage-config.png" target="_blank" rel="noopener"><img src="screenshots/21-creation-gpo-blocage-config.png" alt="Création de la GPO destinée à bloquer le Panneau de configuration."></a><figcaption>Création de la GPO destinée à bloquer le Panneau de configuration.</figcaption></figure>
+        <figure class="shot-card"><a href="screenshots/22-configuration-gpo-blocage.png" target="_blank" rel="noopener"><img src="screenshots/22-configuration-gpo-blocage.png" alt="Activation du paramètre empêchant l’accès au Panneau de configuration et aux Paramètres."></a><figcaption>Activation du paramètre empêchant l’accès au Panneau de configuration et aux Paramètres.</figcaption></figure>
+        <figure class="shot-card"><a href="screenshots/23-resultat-blocage-panneau-config.png" target="_blank" rel="noopener"><img src="screenshots/23-resultat-blocage-panneau-config.png" alt="Vérification du résultat : accès bloqué pour les utilisateurs ciblés."></a><figcaption>Vérification du résultat : accès bloqué pour les utilisateurs ciblés.</figcaption></figure>
+        <figure class="shot-card"><a href="screenshots/24-autorisation-it-panneau-config.png" target="_blank" rel="noopener"><img src="screenshots/24-autorisation-it-panneau-config.png" alt="Vérification complémentaire : le service IT conserve l’accès lorsque la stratégie ne le cible pas."></a><figcaption>Vérification complémentaire : le service IT conserve l’accès lorsque la stratégie ne le cible pas.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Résultats</p>
+        <h2>Validation finale</h2>
+      </div>
+      <div class="grid two">
+        <article class="card">
+          <h3>Tests réussis</h3>
+          <ul class="clean-list">
+            <li>Connectivité réseau validée entre les machines</li>
+            <li>Jonction des postes clients au domaine keran.local</li>
+            <li>Connexion avec des comptes Active Directory</li>
+            <li>Accès autorisé au dossier commun</li>
+            <li>Accès refusé au dossier comptabilité pour les profils non autorisés</li>
+            <li>Déploiement du fond d’écran via GPO</li>
+            <li>Blocage du panneau de configuration sur les utilisateurs ciblés</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Problèmes traités</h3>
+          <ul class="clean-list">
+            <li>Paramétrage IP / DNS et validation de la communication</li>
+            <li>Permissions de partage et permissions NTFS</li>
+            <li>Accès au chemin réseau du fond d’écran GPO</li>
+            <li>Mise à jour des stratégies via gpupdate</li>
+            <li>Vérification des droits différents selon les services</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Projet Active Directory – environnement virtuel d’entreprise – domaine <strong>keran.local</strong></p>
+  </footer>
+</body>
+</html>
